@@ -14,19 +14,21 @@ Leveraging deep learning models like LSTM, GRU, Bi-LSTM, and Bi-GRU, this study 
 ## Technical Framework
 
 ### Data Preparation and Preprocessing
+Data is preprocessed extensively to ensure quality. This involves tokenization, lemmatization, n-grams extraction, removal of stopwords, and data visualization through word clouds.
 
-The analysis commences with data preprocessing to ensure the quality and consistency of the dataset. This involves:
-- Tokenization and extraction of n-grams.
-- Removal of stopwords and non-alphanumeric characters.
-- Generation of word clouds to visualize frequent terms in the reviews.
+### Tokenization and Sequence Padding
+The dataset is tokenized using Keras' Tokenizer, creating a vocabulary index based on the word frequency in the dataset. Each text sequence is then transformed into a sequence of integers. The sequences are padded to have the same length for model training.
 
-### Libraries and Tools
+Vocabulary Size: 13477
+Max Sequence Length: 115
+Libraries and Tools
+Key libraries for data manipulation, visualization, NLP, and deep learning include pandas, numpy, matplotlib, seaborn, nltk, and tensorflow.
 
-The project employs a rich array of libraries and tools to facilitate the analysis, including:
-- `pandas`, `numpy`, `matplotlib`, and `seaborn` for data manipulation and visualization.
-- `nltk` for natural language processing tasks.
-- `tensorflow` and `keras` for building and training deep learning models.
-- `sklearn` for model evaluation and additional preprocessing.
+### Handling Imbalanced Data with SMOTE
+SMOTE (Synthetic Minority Over-sampling Technique) is applied to balance the dataset, improving model performance by addressing class imbalance.
+
+### Word Embedding with GloVe
+GloVe (Global Vectors for Word Representation) is used for word embedding, transforming words into a numerical format that deep learning models can understand.
 
 ### Model Architecture and Training
 
